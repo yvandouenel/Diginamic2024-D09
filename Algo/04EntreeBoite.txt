@@ -1,0 +1,38 @@
+\\ Module principal
+DÉBUT
+prix = 0
+coef = 1
+mineur = 0
+ 
+REQUÊTE "Nombre de personnes" , nbPersonnes
+
+SI nbPersonnes > 3 ALORS
+    coef = 0.9
+FINSI
+
+POUR i = 0 JUSQU'À nbPersonnes -1 FAIRE
+    ÉCRIRE "Age de la personne ", i + 1
+    LIRE age
+    \\ Si la personne est mineure alors je sors de la boucle et j'assigne à mineur la valeur 1
+    SI age < 18 ALORS
+        mineur = 1
+    FINSI
+
+    ÉCRIRE "Sexe de la personne (f ou m) ", i + 1
+    LIRE sexe
+
+    SI sexe = "f" ALORS
+        prix = prix + (35 * coef)
+    SINON 
+        prix = prix + (50 * coef)
+    FINSI
+    
+FINPOUR
+
+SI mineur = 1  ALORS
+    ÉCRIRE "Personne ne rentre, il y a un mineur ! "
+SINON 
+     ÉCRIRE "Vous pouvez entrer mais payez : ", prix
+FINSI
+
+FIN
