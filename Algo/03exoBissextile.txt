@@ -1,0 +1,12 @@
+\\ Module principal
+DÉBUT
+        
+ ECRIRE "Déterminer si une année est bissextile"
+ ECRIRE "Donnez une année sur 4 chiffres"
+ LIRE annee
+ SI (annee%4=0 ET annee%100!=0) OU annee%400=0 ALORS
+ ECRIRE "L'année ",annee," est bissextile"
+ SINON
+   ECRIRE "L'année ",annee," n'est pas bissextile"
+ FINSI
+FIN
