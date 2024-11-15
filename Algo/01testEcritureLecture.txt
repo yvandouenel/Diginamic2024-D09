@@ -1,0 +1,10 @@
+DÉBUT
+\\ Requête va permettre de déclarer et d'assigner les variables a et b non typées
+REQUÊTE "Entrer une valeur a et pour b : " , a , b
+
+ÉCRIRE "La somme de a + b = ", a + b
+ÉCRIRE "La différence entre a et b (a-b) = ", a - b
+ÉCRIRE "Le quotien entre a et b (a/b) = ", a / b
+ÉCRIRE "Le reste de la division entière (division euclidienne a % b) = ", a % b
+
+FIN

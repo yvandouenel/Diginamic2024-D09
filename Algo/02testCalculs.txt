@@ -1,0 +1,27 @@
+\\ Module principal
+DÉBUT
+
+REQUÊTE "Entrer a, b et l'opérateur : " , a, b, operateur
+
+EXECUTER calcul(operateur, a, b)\\ arguments
+
+
+TANTQUE operateur !="+" ET operateur !="-" ET operateur !="*" ET operateur !="/"   FAIRE
+    REQUÊTE "Entrer une valeur pour l'opérateur(+, -, *, /) : " , operateur
+    EXECUTER calcul(operateur, a, b)
+FINTANTQUE
+
+FIN
+
+\\ Module auxiliaire calcul
+ENTRER operateur, a, b \\ paramètres
+    SI operateur = "+" ALORS
+        ECRIRE "Addition de a et b = ", a + b
+    SINON SI operateur = "-" ALORS
+        ECRIRE "Soustraction de a - b = ", a - b
+    SINON SI operateur = "*" ALORS
+        ECRIRE "Multiplication de a * b = ", a * b
+    SINON SI operateur = "/" ALORS
+        ECRIRE "Division de a / b = ", a / b
+    FINSI
+RETOURNER
