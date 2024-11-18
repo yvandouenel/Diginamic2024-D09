@@ -11,3 +11,5 @@ if nombre_entier.isdigit():
     print(nombre_entier)
 else:
     print("vous n'avez pas entré un nombre entier")
+
+nombre_entier = input("veuillez entrer un nombre entier: ")
