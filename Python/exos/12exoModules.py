@@ -35,4 +35,5 @@ path.touch(exist_ok=True)
 
 # Ecriture des nombres aléatoires dans le fichier
 path.write_text(str(random1) + "\n" + str(random2))
+# path.write_text(f"{random1})\n {random2}")
 print(f"Je viens d'écrire dans le fichier Document/aleatoires.txt {random1} {random2} ")
