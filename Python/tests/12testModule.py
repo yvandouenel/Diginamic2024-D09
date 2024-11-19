@@ -24,3 +24,8 @@ if not os.path.exists(dossier):
     print(f"je viens de créer le dossier {dossier}")
 else:
     print("Ce dossier existe déjà")
+
+# Suppression de l'architecture de dossier nouvellement créée
+if os.path.exists(dossier):
+    os.removedirs(dossier)
+    print(f"je viens de supprimer le dossier {dossier}")
