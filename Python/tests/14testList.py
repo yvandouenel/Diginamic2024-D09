@@ -44,3 +44,13 @@ list_int_sorted = sorted(liste_int)
 print(liste_str)  # ['a', 'b', 'c', 'm', 'r', 'y', 'z']
 print(liste_int)
 print(list_int_sorted)  # [1, 2, 2, 23, 42, 54, 75]
+
+result = "".join(liste_str)
+print(result)
+
+ma_liste = [1, 2, 33, 477, 5, 61, 73, 8]
+
+# Filtre de la liste en ne gardant que les valeur supérieure à 100
+filtre = filter(lambda x: x > 100, ma_liste)
+
+print(filtre)
