@@ -60,3 +60,19 @@ mon_dict = {
 print(mon_dict["admin"])  # True
 print(mon_dict["enfants"][0])  # Glop
 print(mon_dict["enfants"][1]["prenom"])  # Timothée
+
+print(mon_dict.get("nom"))
+
+mon_dict = {"a": True, "b": True, "c": False}
+
+mon_dict["a"] = False
+
+mon_dict["prod"] = [7, 8, 9]
+del mon_dict["a"]
+
+print(mon_dict)
+
+for cle in mon_dict:  # boucle sur les clés par défaut
+    print(cle)
+    # Comment afficher la valeur qui correspond à cette clé ?
+    print(mon_dict[cle])
