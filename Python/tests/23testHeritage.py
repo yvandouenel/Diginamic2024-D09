@@ -19,7 +19,35 @@ class Admin(User):
         self.service = service
 
 
+# Est assigné à la variable admin 1 une instance de la classe Admin
 admin1 = Admin("Dusse", "Jean-Claude", "DSI")
 admin1.get_full_name()
 print(Admin.role)
-print(User.role)
+print(admin1.service)
+
+
+class Chaise:
+    # Attribut de classe
+    nb_pieds = 4
+
+    def __init__(self, couleur: str):
+        self.couleur = couleur
+
+
+class ChaiseEnBois(Chaise):
+
+    def __init__(self, couleur: str, bois: str):
+        super().__init__(couleur)
+        self.bois = bois
+
+    def __str__(self):
+        return f"Instance de Chaise {self.couleur} en {self.bois} qui comporte, comme toute chaise qui se restecte,   {Chaise.nb_pieds} pieds"
+
+
+# Instanciations
+chaise_bleue = Chaise("bleu")
+chaise_rose = Chaise("rose")
+
+chaise_chene_rose = ChaiseEnBois(bois="chêne", couleur="rose")
+
+print(chaise_chene_rose)
